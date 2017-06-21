@@ -1,0 +1,22 @@
+import pandas
+
+def time_to_hour(time):
+    '''
+    Given an input variable time that represents time in the format of:
+    "00:00:00" (hour:minutes:seconds)
+    
+    Write a function to extract the hour part from the input variable time
+    and return it as an integer. For example:
+        1) if hour is 00, your code should return 0
+        2) if hour is 01, your code should return 1
+        3) if hour is 21, your code should return 21
+        
+    Please return hour as an integer.
+    '''
+    split_time = list(time.split(':')[0])
+    if split_time[0] == 0:
+        hour = int(split_time[1])
+    else:
+        hour = int(split_time[0]+split_time[1])
+    
+    return hour
